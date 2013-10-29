@@ -46,8 +46,8 @@ bayes.logreg<-function(m,y,X,beta.0, Sigma.0.inv,
   beta.update<-function(beta.cur,v_sq){
     #browser()
     beta.star<-mvrnorm(n=1,mu=beta.cur, Sigma=v_sq)
-    pdf.y.beta.cur=dbinom(y,size=m,prob=logit(X%*%beta.cur)/(1+logit(X%*%beta.cur)),log=TRUE)
-    pdf.y.beta.star=dbinom(y,size=m,prob=logit(X%*%beta.star)/(1+logit(X%*%beta.star)),log=TRUE)
+    pdf.y.beta.cur=sum(dbinom(y,size=m,prob=logit(X%*%beta.cur)/(1+logit(X%*%beta.cur)),log=TRUE))
+    pdf.y.beta.star=sum(dbinom(y,size=m,prob=logit(X%*%beta.star)/(1+logit(X%*%beta.star)),log=TRUE))
     pdf.beta.star=dmvnorm(as.vector(beta.star),mean=c(0,0),sigma=diag(1,2),log=TRUE)
     pdf.beta.cur=dmvnorm(as.vector(beta.cur),mean=c(0,0),sigma=diag(1,2),log=TRUE)
     accept.prob=min(0,pdf.y.beta.star+pdf.beta.star-(pdf.y.beta.cur+pdf.beta.cur))
