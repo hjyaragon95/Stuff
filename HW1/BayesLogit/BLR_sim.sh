@@ -26,7 +26,11 @@
 ##
 ###############################################################################
 
+<<<<<<< HEAD
 module load R/3.0.2
+=======
+module load R/3.0.0
+>>>>>>> upstream/master
 
 # Name of the job - You'll probably want to customize this.
 #SBATCH --job-name=blr_sim_data

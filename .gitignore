@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+ucdsta250.pem
+test-output/
+groups-output/
+mini-groups-output/
+groups.txt
+>>>>>>> upstream/master
 *.Rhistory
 tweetdump.txt
 my_secret_codes.txt
