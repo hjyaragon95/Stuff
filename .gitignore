@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ucdsta250.pem
+=======
+*.pem
+>>>>>>> upstream/master
 test-output/
 groups-output/
 mini-groups-output/
